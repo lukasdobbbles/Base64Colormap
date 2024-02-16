@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apply Colormap</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        form {
+            background-color: white;
+            padding: 2em;
+            border-radius: 5px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        input[type="file"] {
+            margin-bottom: 1em;
+        }
+
+        input[type="submit"] {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+
+        #resultImages {
+            display: none;
+        }
+
+        #resultImages img {
+            height: 10rem;
+            width: 10rem;
+        }
+    </style>
+</head>
+
+<body>
+    <form id="colormapForm">
+        <h1>Apply Colormap</h1>
+        <input type="text" id="base64Image">
+        <input type="submit">
+    </form>
+    <div id="resultImages">
+        <img alt="input image" id="inputImage">
+        <img alt="output image" id="outputImage">
+    </div>
+    
+    <script src="dist/webpack.bundle.js"></script>
+
+</body>
+
+</html>
